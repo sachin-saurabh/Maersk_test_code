@@ -41,7 +41,7 @@ let cardGenerator = (arr) => {
 
 window.onload = () => {
     let titleMsg = 'Shuffle and Sort';
-    let creator = 'by Sachin Saurabh';
+    let creator = ' by Sachin Saurabh';
     document.getElementById('header').innerHTML = titleMsg;
     document.getElementById('footer').innerHTML = titleMsg + creator;
     cardGenerator(array);

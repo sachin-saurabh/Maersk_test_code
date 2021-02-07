@@ -50,11 +50,11 @@ body{
 .cell {
     text-align: center;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 350%;
-  color:#FFFFFF;
-  grid-area: 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 350%;
+    color:#FFFFFF;
+    grid-area: 1fr;
 
 }
 
@@ -94,7 +94,7 @@ body{
         grid-row-gap: 3px;
     
     }
-    .btn1 {
+    .btnContainer {
         margin:auto;
     }
 
