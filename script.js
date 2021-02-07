@@ -7,14 +7,15 @@ let suffleBtn = document.getElementById('suffleBtn');
  * @param {*} arr : takes in input of array and generates grid with style
  */
 let cardGenerator = (arr) => {
-    document.getElementById('g-container').innerHTML = '';
-    for (i in arr) {
+    let gridContainer = document.getElementById('g-container');
+    gridContainer.innerHTML = '';
+    arr.forEach((ele, i) =>{
         let numChild = document.createElement('div');
         numChild.id = 'num_'+i;
         numChild.className = 'cell'; 
         let clientWidth = document.documentElement.clientWidth;
         let color = '';
-         switch(arr[i].toString()) {
+         switch(ele.toString()) {
             case '1':
             case '8': color = '#6F98A8';
             break;
@@ -33,8 +34,9 @@ let cardGenerator = (arr) => {
             numChild.style.borderLeft = '0px';
         }
         numChild.innerHTML = arr[i];
-        document.getElementById('g-container').appendChild(numChild);
-    }
+        gridContainer.appendChild(numChild);
+
+    });
 }
 
 window.onload = () => {
