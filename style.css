@@ -1,0 +1,125 @@
+body{
+   overflow-y: hidden; 
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    border-bottom: 3px solid #BFBFBF; 
+}
+
+.button_grid {
+    grid-area: button;
+
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    font-style:italic;
+    font-size: 80%;
+}
+
+.g-container {
+    grid-area: numGrid;
+}
+
+
+#parentContainer {
+    width: device-width;
+    height: calc(100vh - 10px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3% 92% 5%;
+    grid-template-areas: 
+    "header header header"
+    "numGrid numGrid button"
+    "footer footer footer";
+    background-color: #EFEFEF;
+}
+
+
+
+.g-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.cell {
+    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 350%;
+  color:#FFFFFF;
+  grid-area: 1fr;
+
+}
+
+.btn {
+    background-color: #72C3DC;
+    border-radius: 5px;
+    border: 1px solid #72C3DC;
+    width:50%;
+    margin: 10px;
+    color: #FFFFFF;
+    padding:3%;
+    border-bottom: 4px solid #2F454E;
+}
+
+@media (max-width: 375px) {
+
+    body{
+        border: 4px solid #000000;
+        margin: 0px;
+    }
+
+    #parentContainer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 5% 10% 80% 3%;
+        grid-template-areas:
+        "header"
+        "button"
+        "numGrid"
+        "footer";
+        background-color: #FFFFFF;
+    }
+
+    .g-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(9,0.75fr);
+        grid-row-gap: 3px;
+    
+    }
+    .btn1 {
+        margin:auto;
+    }
+
+    .btn {
+        padding: 5px;
+        max-width: 20%;
+        float:left;
+        transform : translate3d(6em, 0, 0);
+
+    }
+
+    .cell {
+        color: #000000;
+        margin: 0 5% 0 5%;
+        font-size: 6vw;
+    }
+
+    .header{
+        padding: 1vw;
+        background-color: #333333 ;
+        color:#FFFFFF;
+        border-bottom:0px;
+    }
+
+    .footer{
+        padding: 3vw;
+    }
+}
